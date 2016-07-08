@@ -1,0 +1,18 @@
+{
+    "name": "Medium right to left support",
+    "version": "0.1",
+    "minimum_chrome_version": "49.0",
+    "description": "Set RTL support for Medium articles",
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "permissions": [
+        "tabs"
+    ],
+	"content_scripts": [{
+		"matches": ["https://medium.com/*"],
+		"js": ["content-script.js"]
+	}],
+    "manifest_version": 2
+}
