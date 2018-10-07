@@ -4,4 +4,4 @@ Chrome plugin adding RTL support for medium.com
 
 [Read on Medium](https://medium.com/@levyguy/chrome-plugin-for-rtl-support-on-medium-a80a28c25931)
 
-WTFPL License 
+[WTFPL License](http://www.wtfpl.net/)
