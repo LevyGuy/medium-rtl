@@ -32,11 +32,11 @@ let run_on_page = () =>
         });
 
     document
-        .querySelectorAll('ol')
-        .forEach(ol =>
+        .querySelectorAll('ol, ul')
+        .forEach(el =>
         {
-            if ( !patt.test(ol.textContent) ) return;
-            ol.classList.add('rtl');
+            if ( !patt.test(el.textContent) ) return;
+            el.classList.add('rtl');
         })
 };
 
@@ -44,16 +44,16 @@ let run_on_page = () =>
 const css = document.createElement('style');
 css.type = 'text/css';
 css.innerHTML = `
-    ol.rtl,
+    ol.rtl, ul.rtl,
     .postList.rtl {
         direction: rtl;
         
     }
-    ol.rtl>li, .postList.rtl {
+    ol.rtl>li, ul.rtl>li, .postList.rtl {
         margin-right: 30px;
         margin-left: 0;
     }
-    ol.rtl>li:before,
+    ol.rtl>li:before, ul.rtl>li:before,
     .postList.rtl>li:before {
         margin-left: 0;
         margin-right: -78px;
